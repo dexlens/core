@@ -1,0 +1,17 @@
+{
+    "name": "@dexlens/sdk",
+    "version": "0.0.1",
+    "exports": "./src/main.ts",
+    "description": "DEXL SDK",
+    "tasks": {
+      "dev": "deno run --watch --allow-all src/main.ts",
+      "dev:dev": "deno run --watch --allow-all src/dev.ts"
+    },
+    "imports": {
+      "@std/assert": "jsr:@std/assert@1"
+    },
+    "publish": {
+      "include": ["LICENSE", "README.md", "src/**/*"],
+      "exclude": [".env", "backups"]
+    }
+  }
