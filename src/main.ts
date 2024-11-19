@@ -7,6 +7,7 @@ import { getDatabaseEmbedding } from "./packages/getDatabaseEmbedding/index.ts";
 import { queryDatabaseIndex } from "./packages/queryDatabaseIndex/index.ts";
 import { consumeTweetAndLearn } from "./packages/consumeTweetAndLearn/index.ts";
 import { preparePinecone } from "./packages/preparePinecone/index.ts";
+import { prepareAnthropic } from "./packages/prepareAnthropic/index.ts";
 export {
     logger,
     formatValueToCurrency,
@@ -16,5 +17,6 @@ export {
     getDatabaseEmbedding,
     queryDatabaseIndex,
     consumeTweetAndLearn,
-    preparePinecone
+    preparePinecone,
+    prepareAnthropic
 }
