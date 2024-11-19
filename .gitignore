@@ -5,4 +5,3 @@ src/shared
 data
 src/dev.ts
 .DS_Store
-apps/*
