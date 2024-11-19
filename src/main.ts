@@ -1,6 +1,8 @@
 import { logger } from "./packages/logger/index.ts";
 import { formatValueToCurrency } from "./packages/formatValueToCurrency/index.ts";
+import { setupEthWatcherWebsocket } from "./packages/setupEthWatcherWebsocket/index.ts";
 export {
     logger,
-    formatValueToCurrency
+    formatValueToCurrency,
+    setupEthWatcherWebsocket
 }
