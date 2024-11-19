@@ -1,3 +1,5 @@
-import { log } from "./functions.ts";
+import { logger } from "./packages/logger/index.ts";
 
-log("Hello World");
+export {
+    logger
+}

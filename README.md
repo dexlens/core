@@ -1,1 +1,1 @@
-# DEXL SDK
+# DEXL CORE
