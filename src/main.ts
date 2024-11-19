@@ -3,10 +3,16 @@ import { formatValueToCurrency } from "./packages/formatValueToCurrency/index.ts
 import { setupEthWatcherWebsocket } from "./packages/setupEthWatcherWebsocket/index.ts";
 import { openEthWatcherWebsocket } from "./packages/openEthWatcherWebsocket/index.ts";
 import { parseChainEvents } from "./packages/parseChainEvents/index.ts";
+import { getDatabaseEmbedding } from "./packages/getDatabaseEmbedding/index.ts";
+import { queryDatabaseIndex } from "./packages/queryDatabaseIndex/index.ts";
+import { consumeTweetAndLearn } from "./packages/consumeTweetAndLearn/index.ts";
 export {
     logger,
     formatValueToCurrency,
     setupEthWatcherWebsocket,
     openEthWatcherWebsocket,
-    parseChainEvents
+    parseChainEvents,
+    getDatabaseEmbedding,
+    queryDatabaseIndex,
+    consumeTweetAndLearn
 }
