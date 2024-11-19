@@ -6,6 +6,7 @@ import { parseChainEvents } from "./packages/parseChainEvents/index.ts";
 import { getDatabaseEmbedding } from "./packages/getDatabaseEmbedding/index.ts";
 import { queryDatabaseIndex } from "./packages/queryDatabaseIndex/index.ts";
 import { consumeTweetAndLearn } from "./packages/consumeTweetAndLearn/index.ts";
+import { preparePinecone } from "./packages/preparePinecone/index.ts";
 export {
     logger,
     formatValueToCurrency,
@@ -14,5 +15,6 @@ export {
     parseChainEvents,
     getDatabaseEmbedding,
     queryDatabaseIndex,
-    consumeTweetAndLearn
+    consumeTweetAndLearn,
+    preparePinecone
 }
