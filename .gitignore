@@ -1,0 +1,7 @@
+node_modules
+.env
+shared
+src/shared
+data
+src/dev.ts
+.DS_Store

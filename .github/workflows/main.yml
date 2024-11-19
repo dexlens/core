@@ -1,0 +1,24 @@
+name: Deno
+
+permissions:
+  contents: write
+
+on: 
+  push:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup repo
+        uses: actions/checkout@v3
+
+      - name: Setup Deno
+        uses: denoland/setup-deno@v2.0.0
+
+      - name: Run deno
+        run: |
+          git clone https://github.com/dexlens/github-action-telegram.git
+          cd github-action-telegram
+          deno run --allow-all main.ts ${{ secrets.TELEGRAM_TOKEN }} ${{ secrets.TELEGRAM_CHANNEL }}
