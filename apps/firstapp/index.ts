@@ -1,4 +1,3 @@
-import { logger, formatValueToCurrency } from "@dexlens/core";
+import { formatValueToCurrency, useDedent } from "@dexlens/core";
 
-logger("Hello World");
 console.log(formatValueToCurrency(100));
