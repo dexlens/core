@@ -10,6 +10,7 @@ const bot = new Bot(process.env.DEV_BOT_API_TOKEN);
 import { useStartCommand } from "./commands/start.ts";
 import { useStatsCommand } from "./commands/stats.ts";
 import { useBoardCommand } from "./commands/board.ts";
+import { useSubscribeCommand } from "./commands/subscribe.ts";
 
 /**
  * /start command
@@ -30,5 +31,12 @@ useStatsCommand(bot, supabase);
  * example: /board
  */
 useBoardCommand(bot, supabase);
+
+/**
+ * /subscribe command
+ * description: subscribe to project updates
+ * example: /subscribe
+ */
+useSubscribeCommand(bot, supabase);
 
 bot.start();
