@@ -1,6 +1,5 @@
 import { createOpenAI } from 'npm:@ai-sdk/openai'
-import { streamText } from 'npm:ai'
-import { createStreamableValue } from 'npm:ai/rsc'
+import { generateText } from 'npm:ai'
 import dedent from 'npm:dedent'
 import dotenv from 'npm:dotenv'
 dotenv.config()
@@ -28,7 +27,6 @@ export async function betterPrompt({
   model: string
   prompt: string
 }) {
-  const stream = createStreamableValue('')
   try {
     const openai = createOpenAI({
       apiKey,
@@ -37,9 +35,9 @@ export async function betterPrompt({
 
     ;(async () => {
       try {
-        const { textStream } = await streamText({
+        const { text } = await generateText({
           model: openai(model),
-         prompt: dedent`
+          prompt: dedent`
         I want you to improve the user prompt that is wrapped in \`<make_better_prompt>\` tags.
 
         IMPORTANT: Only respond with the improved prompt and nothing else!
@@ -48,14 +46,11 @@ export async function betterPrompt({
           ${prompt}
         </make_better_prompt>
          `
-        });
-        for await (const delta of textStream) {
-          stream.update(delta)
-        }
-        stream.done()
+        })
+        return text
       } catch (e: any) {
-        logger.error(e)
-        stream.error(e.responseBody)
+        console.error(e)
+        return e.message
       }
     })()
   } catch (error) {
