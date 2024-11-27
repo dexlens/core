@@ -13,6 +13,7 @@ import { useBoardCommand } from "./commands/board.ts";
 import { useSubscribeCommand, useUnsubscribeCommand } from "./commands/subscribe.ts";
 import { useInfoCommand } from "./commands/info.ts";
 import { useGiftCommand } from "./commands/gift.ts";
+import { useClaimCommand } from "./commands/claim.ts";
 
 /**
  * /start command
@@ -61,5 +62,12 @@ useInfoCommand(bot);
  * example: /gift <username> <number of points>
  */
 useGiftCommand(bot, supabase, { DEXL_CHANNEL_ID });
+
+/**
+ * /claim command
+ * description: claim points
+ * example: /claim
+ */
+useClaimCommand(bot, supabase, { DEXL_CHANNEL_ID });
 
 bot.start();
