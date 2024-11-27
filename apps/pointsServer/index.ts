@@ -12,6 +12,7 @@ import { useStatsCommand } from "./commands/stats.ts";
 import { useBoardCommand } from "./commands/board.ts";
 import { useSubscribeCommand, useUnsubscribeCommand } from "./commands/subscribe.ts";
 import { useInfoCommand } from "./commands/info.ts";
+import { useGiftCommand } from "./commands/gift.ts";
 
 /**
  * /start command
@@ -53,5 +54,12 @@ useUnsubscribeCommand(bot, supabase);
  * example: /info
  */
 useInfoCommand(bot);
+
+/**
+ * /gift command
+ * description: gift points to a user
+ * example: /gift <username> <number of points>
+ */
+useGiftCommand(bot, supabase, { DEXL_CHANNEL_ID });
 
 bot.start();
