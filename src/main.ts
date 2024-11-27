@@ -10,7 +10,9 @@ import { prepareAnthropic } from "./packages/prepareAnthropic/index.ts";
 import { useDedent } from "./packages/useDedent/index.ts";
 import { maskUsername } from "./packages/maskUsername/index.ts";
 import { betterPrompt } from "./packages/betterPrompt/index.ts";
+import { useWeb3 } from "./packages/useWeb3/index.ts";
 export {
+    useWeb3,
     betterPrompt,
     maskUsername,
     formatValueToCurrency,
