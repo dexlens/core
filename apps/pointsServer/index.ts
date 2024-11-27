@@ -9,6 +9,7 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 const bot = new Bot(process.env.DEV_BOT_API_TOKEN);
 import { useStartCommand } from "./commands/start.ts";
 import { useStatsCommand } from "./commands/stats.ts";
+import { useBoardCommand } from "./commands/board.ts";
 
 /**
  * /start command
@@ -23,5 +24,11 @@ useStartCommand(bot, supabase, {
  * example: /stats
  */
 useStatsCommand(bot, supabase);
+
+/**
+ * /board command
+ * example: /board
+ */
+useBoardCommand(bot, supabase);
 
 bot.start();
