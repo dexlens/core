@@ -6,5 +6,3 @@
 - Starters
 - Types
 - SDK
-
-
