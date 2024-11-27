@@ -11,6 +11,7 @@ import { useStartCommand } from "./commands/start.ts";
 import { useStatsCommand } from "./commands/stats.ts";
 import { useBoardCommand } from "./commands/board.ts";
 import { useSubscribeCommand, useUnsubscribeCommand } from "./commands/subscribe.ts";
+import { useInfoCommand } from "./commands/info.ts";
 
 /**
  * /start command
@@ -45,5 +46,12 @@ useSubscribeCommand(bot, supabase);
  * example: /unsubscribe
  */
 useUnsubscribeCommand(bot, supabase);
+
+/**
+ * /info command
+ * description: info about the bot
+ * example: /info
+ */
+useInfoCommand(bot);
 
 bot.start();
