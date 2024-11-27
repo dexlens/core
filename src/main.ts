@@ -8,7 +8,9 @@ import { consumeTweetAndLearn } from "./packages/consumeTweetAndLearn/index.ts";
 import { preparePinecone } from "./packages/preparePinecone/index.ts";
 import { prepareAnthropic } from "./packages/prepareAnthropic/index.ts";
 import { useDedent } from "./packages/useDedent/index.ts";
+import { maskUsername } from "./packages/maskUsername/index.ts";
 export {
+    maskUsername,
     formatValueToCurrency,
     setupEthWatcherWebsocket,
     openEthWatcherWebsocket,
