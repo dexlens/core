@@ -14,4 +14,15 @@ function useSubscribeCommand(bot: Bot, supabase: SupabaseClient) {
     });
 }
 
-export { useSubscribeCommand };
+function useUnsubscribeCommand(bot: Bot, supabase: SupabaseClient) {
+    bot.command("unsubscribe", async (ctx: Context) => {
+        const userId = ctx.from?.id;
+        await supabase.from(SUPABASE_TABLE_NAME).update({ subscribed: false }).eq(
+            "user_id",
+            userId,
+        );
+        ctx.reply("You have unsubscribed from project updates");
+    });
+}
+
+export { useSubscribeCommand, useUnsubscribeCommand };
