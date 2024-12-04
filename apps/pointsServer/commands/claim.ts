@@ -27,8 +27,9 @@ function useClaimCommand(bot: Bot, supabase: SupabaseClient, options: any) {
 
         if (timeSinceLastClaim < 24 * 60 * 60 * 1000) {
             const numberOfHoursUntilNextClaim = Math.ceil(hoursRemaining);
+            const hoursAndMinutesUntilNextClaim = `${numberOfHoursUntilNextClaim} hours and ${Math.ceil((timeSinceLastClaim % (1000 * 60 * 60)) / (1000 * 60))} minutes`;
             return ctx.reply(
-                `You can claim again in ${numberOfHoursUntilNextClaim} hours`,
+                `You can claim again in ${hoursAndMinutesUntilNextClaim}`,
             );
         }
 
@@ -49,7 +50,7 @@ function useClaimCommand(bot: Bot, supabase: SupabaseClient, options: any) {
         ctx.reply(
             `You have claimed ${numberOfPoints} points! Come back in 24 hours to claim again.`,
         );
-        bot.api.sendMessage(options.channelId, `${user.username} has successfully claimed points, you should too!`);
+        bot.api.sendMessage(options.channelId, `@${user.username} has successfully claimed points, you should too!`);
     });
 }
 
