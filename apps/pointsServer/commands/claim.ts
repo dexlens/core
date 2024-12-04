@@ -26,10 +26,16 @@ function useClaimCommand(bot: Bot, supabase: SupabaseClient, options: any) {
         const hoursRemaining = 24 - (timeSinceLastClaim / (1000 * 60 * 60));
 
         if (timeSinceLastClaim < 24 * 60 * 60 * 1000) {
-            const numberOfHoursUntilNextClaim = Math.ceil(hoursRemaining);
-            const hoursAndMinutesUntilNextClaim = `${numberOfHoursUntilNextClaim} hours and ${Math.ceil((timeSinceLastClaim % (1000 * 60 * 60)) / (1000 * 60))} minutes`;
+            const numberOfHoursUntilNextClaim = Math.floor(hoursRemaining);
+            if (numberOfHoursUntilNextClaim <= 1) {
+                const minutesRemaining = Math.ceil((hoursRemaining * 60));
+                return ctx.reply(
+                    `You can claim again in ${minutesRemaining} minutes`,
+                );
+            }
+            const howManyMinutesBetweenTheHour = 60 - (timeSinceLastClaim / (1000 * 60) % 60);
             return ctx.reply(
-                `You can claim again in ${hoursAndMinutesUntilNextClaim}`,
+                `You can claim again in ${numberOfHoursUntilNextClaim} hours and ${Math.ceil(howManyMinutesBetweenTheHour)} minutes`,
             );
         }
 
