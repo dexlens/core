@@ -36,7 +36,42 @@ function useGiftCommand(bot: Bot, supabase: SupabaseClient, options: any) {
         // update gifter points
         await supabase.from("users").update({ points: giftingUser.points - points }).eq("username", ctx.from.username);
         // make the response in tempalteString
-        ctx.reply(`${username} has been gifted ${points} points by ${ctx.from.username}`);
+        // ctx.reply(`${username} has been gifted ${points} points by ${ctx.from.username}`);
+        // TODO: Refactor this into module
+        const videoUrls = [
+            "https://github.com/dexlens/cdn/raw/refs/heads/main/VID_20241128_160934_489.mp4",
+            "https://github.com/dexlens/cdn/raw/refs/heads/main/1564743423408.mp4", 
+            "https://github.com/dexlens/cdn/raw/refs/heads/main/legend.mp4",
+            "https://github.com/dexlens/cdn/raw/refs/heads/main/fafo-findout.mp4",
+            "https://github.com/dexlens/cdn/raw/refs/heads/main/50cent-laughing.mp4",
+            "https://github.com/dexlens/cdn/raw/refs/heads/main/nahh-nah.mp4",
+            "https://github.com/dexlens/cdn/raw/refs/heads/main/thumbs-thumbs-up-kid.mp4",
+            "https://github.com/dexlens/cdn/raw/refs/heads/main/good-morning.mp4",
+            "https://github.com/dexlens/cdn/raw/refs/heads/main/gordon.mp4",
+            "https://github.com/dexlens/cdn/raw/refs/heads/main/drops-mic.mp4",
+            "https://github.com/dexlens/cdn/raw/refs/heads/main/shaggy-scooby-doo.mp4",
+            "https://github.com/dexlens/cdn/raw/refs/heads/main/noice-nice.mp4",
+            "https://github.com/dexlens/cdn/raw/refs/heads/main/stare-awkward.mp4",
+            "https://github.com/dexlens/cdn/raw/refs/heads/main/cristiano-ronaldo-portugal.mp4",
+            "https://github.com/dexlens/cdn/raw/refs/heads/main/shia-la-beouf-fire.mp4",
+            "https://github.com/dexlens/cdn/raw/refs/heads/main/peaky-blinders-no-fighting.mp4",
+            "https://github.com/dexlens/cdn/raw/refs/heads/main/xd-programming.mp4",
+            "https://github.com/dexlens/cdn/raw/refs/heads/main/cat-computer.mp4",
+            "https://github.com/dexlens/cdn/raw/refs/heads/main/im-tired-developer-cat-gif.mp4",
+            "https://github.com/dexlens/cdn/raw/refs/heads/main/god-coding.mp4",
+            "https://github.com/dexlens/cdn/raw/refs/heads/main/programming.mp4",
+            "https://github.com/dexlens/cdn/raw/refs/heads/main/developer-client.mp4",
+            "https://github.com/dexlens/cdn/raw/refs/heads/main/front.mp4",
+            "https://github.com/dexlens/cdn/raw/refs/heads/main/bugs-video-games.mp4",
+            "https://github.com/dexlens/cdn/raw/refs/heads/main/rugged-crypto-rugged.mp4",
+            "https://github.com/dexlens/cdn/raw/refs/heads/main/weekend-bugs.mp4"
+        ];
+
+        const randomVideoUrl = videoUrls[Math.floor(Math.random() * videoUrls.length)];
+
+        ctx.replyWithVideo(randomVideoUrl, {
+            caption: `@${username} has been gifted ${points} points by @${ctx.from.username}`,
+        });
     });
 }
 
