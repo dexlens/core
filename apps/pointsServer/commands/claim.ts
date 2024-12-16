@@ -22,20 +22,15 @@ function useClaimCommand(bot: Bot, supabase: SupabaseClient, options: any) {
         }
 
         const lastClaim = user.last_claim ? new Date(user.last_claim) : new Date(0);
-        const timeSinceLastClaim = Date.now() - lastClaim.getTime();
-        const hoursRemaining = 24 - (timeSinceLastClaim / (1000 * 60 * 60));
+        const today = new Date();
+        
+        // Reset times to start of day for comparison
+        lastClaim.setHours(0, 0, 0, 0);
+        today.setHours(0, 0, 0, 0);
 
-        if (timeSinceLastClaim < 24 * 60 * 60 * 1000) {
-            const numberOfHoursUntilNextClaim = Math.floor(hoursRemaining);
-            if (numberOfHoursUntilNextClaim <= 1) {
-                const minutesRemaining = Math.ceil((hoursRemaining * 60));
-                return ctx.reply(
-                    `You can claim again in ${minutesRemaining} minutes`,
-                );
-            }
-            const howManyMinutesBetweenTheHour = 60 - (timeSinceLastClaim / (1000 * 60) % 60);
+        if (lastClaim.getTime() === today.getTime()) {
             return ctx.reply(
-                `You can claim again in ${numberOfHoursUntilNextClaim} hours and ${Math.ceil(howManyMinutesBetweenTheHour)} minutes`,
+                "You've already claimed your points today. Come back tomorrow!"
             );
         }
 
@@ -54,7 +49,7 @@ function useClaimCommand(bot: Bot, supabase: SupabaseClient, options: any) {
         }
 
         ctx.reply(
-            `You have claimed ${numberOfPoints} points! Come back in 24 hours to claim again.`,
+            `You have claimed ${numberOfPoints} points! Come back tomorrow to claim again.`,
         );
         bot.api.sendMessage(options.channelId, `@${user.username} has successfully claimed points, you should too!`);
     });
