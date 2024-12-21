@@ -1,3 +1,3 @@
-import { formatValueToCurrency, useDedent } from "@dexlens/core";
+import { testEncryption } from "@dexlens/core";
 
-console.log(formatValueToCurrency(100));
+console.log(testEncryption("Hello, world!", "password"));
