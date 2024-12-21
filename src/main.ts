@@ -12,6 +12,11 @@ import { maskUsername } from "./packages/maskUsername/index.ts";
 import { betterPrompt } from "./packages/betterPrompt/index.ts";
 import { useWeb3 } from "./packages/useWeb3/index.ts";
 import { useWallet } from "./packages/useWallet/index.ts";
+import { 
+    testEncryption,
+    decrypt,
+    encrypt
+ } from "./packages/encryptionUtils/index.ts";
 export {
     useWallet,
     useWeb3,
@@ -27,4 +32,7 @@ export {
     preparePinecone,
     prepareAnthropic,
     useDedent,
+    testEncryption,
+    decrypt,
+    encrypt
 }
