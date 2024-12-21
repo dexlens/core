@@ -17,6 +17,7 @@ import {
     decrypt,
     encrypt
  } from "./packages/encryptionUtils/index.ts";
+import { createProtocolWallet } from "./packages/createProtocolWallet/index.ts";
 export {
     useWallet,
     useWeb3,
@@ -34,5 +35,6 @@ export {
     useDedent,
     testEncryption,
     decrypt,
-    encrypt
+    encrypt,
+    createProtocolWallet
 }
