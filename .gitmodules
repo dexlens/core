@@ -1,0 +1,3 @@
+[submodule "src/packages/testsubmodule"]
+	path = src/packages/testsubmodule
+	url = git@github.com:dexlens/testsubmodule.git
