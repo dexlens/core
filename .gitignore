@@ -6,3 +6,7 @@ data
 src/dev.ts
 .DS_Store
 workshop
+src/moved
+src/moving
+apps/moving
+apps/moved
