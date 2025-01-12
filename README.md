@@ -9,4 +9,7 @@ Main branch is protected, you must do Pull request to dev first.
 - Types
 - SDK
 
+## Useful Commands
+- git submodule update --init --recursive
+
 
