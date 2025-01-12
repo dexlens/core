@@ -9,11 +9,3 @@ const SUPABASE_URL = process.env.SUPABASE_URL;
 const SUPABASE_KEY = process.env.SUPABASE_KEY;
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 const bot = new Bot(process.env.DEV_BOT_API_TOKEN);
-
-/**
- * Add your bot logic here
- */
-
-bot.command("start", (ctx) => ctx.reply("Hello, world!"));
-
-bot.start();
