@@ -18,7 +18,7 @@ import {
     encrypt
  } from "./packages/encryptionUtils/index.ts";
 import { createProtocolWallet } from "./packages/createProtocolWallet/index.ts";
-import { sunoApi } from "./packages/useSuno/index.ts";
+// import { sunoApi } from "./packages/useSuno/index.ts";
 export {
     useWallet,
     useWeb3,
@@ -38,5 +38,5 @@ export {
     decrypt,
     encrypt,
     createProtocolWallet,
-    sunoApi
+    // sunoApi
 }
