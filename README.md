@@ -9,6 +9,9 @@ Main branch is protected, you must do Pull request to dev first.
 - Types
 - SDK
 
+# Add the submodule
+git submodule add git@github.com:dexlens/testsubmodule.git
+
 ## Useful Commands
 - git submodule update --init --recursive
 # When cloning the main repository for other developers
