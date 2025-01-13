@@ -7,3 +7,6 @@
 [submodule "apps/bot"]
 	path = apps/bot
 	url = git@github.com:dexlens/bot.git
+[submodule "apps/points-farming"]
+	path = apps/points-farming
+	url = git@github.com:dexlens/points-farming.git
