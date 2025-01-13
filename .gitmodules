@@ -4,3 +4,6 @@
 [submodule "src/packages/better-prompt"]
 	path = src/packages/better-prompt
 	url = git@github.com:dexlens/better-prompt.git
+[submodule "apps/bot"]
+	path = apps/bot
+	url = git@github.com:dexlens/bot.git

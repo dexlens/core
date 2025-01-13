@@ -4,19 +4,12 @@
     "exports": "./src/main.ts",
     "description": "DEXL CORE",
     "tasks": {
-      "dev": "deno run --watch --allow-all src/main.ts",
-      "dev:dev": "deno run --watch --allow-all src/dev.ts",
-      "app:firstapp": "deno run --allow-all apps/firstapp/index.ts",
-      "dev:app:firstapp": "deno run --watch --allow-all apps/firstapp/index.ts",
-      "app:telegramPointsServer": "deno run --allow-all apps/telegramPointsServer/index.ts",
-      "dev:app:telegramPointsServer": "deno run --watch --allow-all apps/telegramPointsServer/index.ts",
-      "app:pointsServer": "deno run --allow-all apps/pointsServer/index.ts",
-      "dev:app:pointsServer": "deno run --watch --allow-all apps/pointsServer/index.ts",
-      "app:devServer": "deno run --allow-all apps/devServer/index.ts",
-      "dev:app:devServer": "deno run --watch --allow-all apps/devServer/index.ts",
-      "push": "git push && deno run --allow-all ./telegram-commit-hook/index.ts",
-      "encryptionApp": "deno run --allow-all apps/encryptionapp/index.ts",
-      "pushtele": "git push && deno run --allow-all ./telegram-commit-hook/index.ts"
+      "maintenanceMode": "deno run --allow-all apps/maintenance-mode/index.ts",
+      "pushtele": "git push && deno run --allow-all ./telegram-commit-hook/index.ts",
+      "maintenanceMode:dev": "deno run --watch --allow-all apps/maintenance-mode/index.ts",
+      "educationBot": "deno run --allow-all apps/education-bot/index.ts",
+      "educationBot:dev": "deno run --watch --allow-all apps/education-bot/index.ts",
+      "bot:dev": "deno run --watch --allow-all apps/bot/index.ts"
     },
     "imports": {
       "@std/assert": "jsr:@std/assert@1",
