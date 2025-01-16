@@ -13,3 +13,6 @@
 [submodule "src/packages/encryptionUtils"]
 	path = src/packages/encryptionUtils
 	url = git@github.com:dexlens/encryptionUtils.git
+[submodule "src/packages/consumeTweetAndLearn"]
+	path = src/packages/consumeTweetAndLearn
+	url = git@github.com:dexlens/consumeTweetAndLearn.git
