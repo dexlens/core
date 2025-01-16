@@ -19,3 +19,6 @@
 [submodule "src/packages/walletUtils"]
 	path = src/packages/walletUtils
 	url = git@github.com:dexlens/walletUtils.git
+[submodule "src/packages/chainUtils"]
+	path = src/packages/chainUtils
+	url = git@github.com:dexlens/chainUtils.git
