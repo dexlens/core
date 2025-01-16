@@ -9,7 +9,9 @@
       "maintenanceMode:dev": "deno run --watch --allow-all apps/maintenance-mode/index.ts",
       "educationBot": "deno run --allow-all apps/education-bot/index.ts",
       "educationBot:dev": "deno run --watch --allow-all apps/education-bot/index.ts",
-      "bot:dev": "deno run --watch --allow-all apps/bot/index.ts"
+      "bot:dev": "deno run --watch --allow-all apps/bot/index.ts",
+      "announcementsBot": "deno run --allow-all apps/announcements-bot/index.ts",
+      "announcementsBot:dev": "deno run --watch --allow-all apps/announcements-bot/index.ts"
     },
     "imports": {
       "@std/assert": "jsr:@std/assert@1",
