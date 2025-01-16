@@ -22,3 +22,6 @@
 [submodule "src/packages/chainUtils"]
 	path = src/packages/chainUtils
 	url = git@github.com:dexlens/chainUtils.git
+[submodule "apps/announcements-bot"]
+	path = apps/announcements-bot
+	url = git@github.com:dexlens/announcements-bot.git
