@@ -10,3 +10,6 @@
 [submodule "apps/points-farming"]
 	path = apps/points-farming
 	url = git@github.com:dexlens/points-farming.git
+[submodule "src/packages/encryptionUtils"]
+	path = src/packages/encryptionUtils
+	url = git@github.com:dexlens/encryptionUtils.git
