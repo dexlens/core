@@ -16,3 +16,6 @@
 [submodule "src/packages/consumeTweetAndLearn"]
 	path = src/packages/consumeTweetAndLearn
 	url = git@github.com:dexlens/consumeTweetAndLearn.git
+[submodule "src/packages/walletUtils"]
+	path = src/packages/walletUtils
+	url = git@github.com:dexlens/walletUtils.git
