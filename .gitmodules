@@ -25,3 +25,6 @@
 [submodule "apps/announcements-bot"]
 	path = apps/announcements-bot
 	url = git@github.com:dexlens/announcements-bot.git
+[submodule "apps/smart-contracts"]
+	path = apps/smart-contracts
+	url = git@github.com:dexlens/smart-contracts.git
