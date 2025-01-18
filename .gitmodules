@@ -28,3 +28,6 @@
 [submodule "apps/smart-contracts"]
 	path = apps/smart-contracts
 	url = git@github.com:dexlens/smart-contracts.git
+[submodule "src/packages/deploymentUtils"]
+	path = src/packages/deploymentUtils
+	url = git@github.com:dexlens/deploymentUtils.git
