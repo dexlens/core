@@ -31,3 +31,6 @@
 [submodule "src/packages/deploymentUtils"]
 	path = src/packages/deploymentUtils
 	url = git@github.com:dexlens/deploymentUtils.git
+[submodule "apps/website"]
+	path = apps/website
+	url = git@github.com:dexlens/website.git
