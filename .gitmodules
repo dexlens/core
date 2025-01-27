@@ -34,3 +34,6 @@
 [submodule "apps/website"]
 	path = apps/website
 	url = git@github.com:dexlens/website.git
+[submodule "apps/gas-checker"]
+	path = apps/gas-checker
+	url = git@github.com:dexlens/gas-checker.git
