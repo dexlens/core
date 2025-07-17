@@ -2,10 +2,13 @@
     "tasks": {
       "start": "deno run --allow-all main.ts",
       "dev": "deno run --watch --allow-all main.ts",
-      "push": "sh pushitrealgood.sh"
+      "push": "sh pushitrealgood.sh",
+      "testappstart": "deno run --allow-all apps/testapp/main.ts",
+      "testappdev": "deno run --watch --allow-all apps/testapp/main.ts"
     },
     "imports": {
-      "@std/assert": "jsr:@std/assert@1"
+      "@std/assert": "jsr:@std/assert@1",
+      "@dexlens/maths": "../galactus/packages/maths/index.ts"
     }
   }
   
