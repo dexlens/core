@@ -1,2 +1,3 @@
-# core
-Core for Everything Dexlens
+# Dexlens CORE
+
+![alt text](galactus.png "Dexlens Core")
