@@ -1,0 +1,77 @@
+{
+  "version": "5",
+  "specifiers": {
+    "npm:@grammyjs/conversations@*": "2.1.0_grammy@1.37.0",
+    "npm:dotenv@*": "17.2.0",
+    "npm:grammy@*": "1.37.0",
+    "npm:tslog@*": "4.9.3"
+  },
+  "npm": {
+    "@grammyjs/conversations@2.1.0_grammy@1.37.0": {
+      "integrity": "sha512-nYoHwFyXcQ2lkQejKReoINknkgFjeIZhyJNMBwHng5UHO/ewHKs1dV2XVaLrKkHTZ1gCZ+dKkjEp26wwHyQeGg==",
+      "dependencies": [
+        "grammy"
+      ]
+    },
+    "@grammyjs/types@3.21.0": {
+      "integrity": "sha512-IMj0EpmglPCICuyfGRx4ENKPSuzS2xMSoPgSPzHC6FtnWKDEmJLBP/GbPv/h3TAeb27txqxm/BUld+gbJk6ccQ=="
+    },
+    "abort-controller@3.0.0": {
+      "integrity": "sha512-h8lQ8tacZYnR3vNQTgibj+tODHI5/+l06Au2Pcriv/Gmet0eaj4TwWH41sO9wnHDiQsEj19q0drzdWdeAHtweg==",
+      "dependencies": [
+        "event-target-shim"
+      ]
+    },
+    "debug@4.4.1": {
+      "integrity": "sha512-KcKCqiftBJcZr++7ykoDIEwSa3XWowTfNPo92BYxjXiyYEVrUQh2aLyhxBCwww+heortUFxEJYcRzosstTEBYQ==",
+      "dependencies": [
+        "ms"
+      ]
+    },
+    "dotenv@17.2.0": {
+      "integrity": "sha512-Q4sgBT60gzd0BB0lSyYD3xM4YxrXA9y4uBDof1JNYGzOXrQdQ6yX+7XIAqoFOGQFOTK1D3Hts5OllpxMDZFONQ=="
+    },
+    "event-target-shim@5.0.1": {
+      "integrity": "sha512-i/2XbnSz/uxRCU6+NdVJgKWDTM427+MqYbkQzD321DuCQJUqOuJKIA0IM2+W2xtYHdKOmZ4dR6fExsd4SXL+WQ=="
+    },
+    "grammy@1.37.0": {
+      "integrity": "sha512-UBGqGKux+49t1vm7n/m1BaeXIYbWESXjhaFxG+9z33VTLSHdQJwIOmpNKmZSaoBlSWbAJE+IJZ30X7RfWvEolA==",
+      "dependencies": [
+        "@grammyjs/types",
+        "abort-controller",
+        "debug",
+        "node-fetch"
+      ]
+    },
+    "ms@2.1.3": {
+      "integrity": "sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA=="
+    },
+    "node-fetch@2.7.0": {
+      "integrity": "sha512-c4FRfUm/dbcWZ7U+1Wq0AwCyFL+3nt2bEw05wfxSz+DWpWsitgmSgYmy2dQdWyKC1694ELPqMs/YzUSNozLt8A==",
+      "dependencies": [
+        "whatwg-url"
+      ]
+    },
+    "tr46@0.0.3": {
+      "integrity": "sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw=="
+    },
+    "tslog@4.9.3": {
+      "integrity": "sha512-oDWuGVONxhVEBtschLf2cs/Jy8i7h1T+CpdkTNWQgdAF7DhRo2G8vMCgILKe7ojdEkLhICWgI1LYSSKaJsRgcw=="
+    },
+    "webidl-conversions@3.0.1": {
+      "integrity": "sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ=="
+    },
+    "whatwg-url@5.0.0": {
+      "integrity": "sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==",
+      "dependencies": [
+        "tr46",
+        "webidl-conversions"
+      ]
+    }
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@std/assert@1"
+    ]
+  }
+}

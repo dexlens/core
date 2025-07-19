@@ -1,10 +1,19 @@
 import { bot } from "@dexlens/telegram-sdk";
-import { shortenAddress } from "@dexlens/utils";
+import { 
+  conversations, 
+  createConversation, 
+  greeting 
+} from "@dexlens/conversations";
+import { logger } from "@dexlens/logger";
 
-bot.command("start", (ctx) => {
-  const address = "0x1234567890123456789012345678901234567890";
-  const shortAddress = shortenAddress(address);
-  ctx.reply(`Hello, ${shortAddress}!`);
+const logs = new logger("stat-bot");
+
+bot.use(conversations());
+bot.use(createConversation(greeting));
+
+bot.command("start", async (ctx) => {
+  logs.info("Starting conversation");
+  await ctx.conversation.enter("greeting");
 });
 
 bot.start();
