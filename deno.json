@@ -14,7 +14,11 @@
       "@dexlens/telegram-sdk": "../galactus/packages/telegram-sdk/index.ts",
       "@dexlens/utils": "../galactus/packages/utils/index.ts",
       "@dexlens/conversations": "../galactus/packages/conversations/index.ts",
-      "@dexlens/logger": "../galactus/packages/logger/index.ts"
+      "@dexlens/logger": "../galactus/packages/logger/index.ts",
+      "@dexlens/menus": "../galactus/packages/menus/index.ts",
+      "@dexlens/supabase": "../galactus/packages/supabase/index.ts",
+      "@dexlens/cdnimages": "../galactus/packages/cdnimages/index.ts",
+      "@dexlens/constants": "../galactus/packages/constants/index.ts"
     }
   }
   

@@ -1,19 +1,29 @@
-import { bot } from "@dexlens/telegram-sdk";
-import { 
-  conversations, 
-  createConversation, 
-  greeting 
-} from "@dexlens/conversations";
-import { logger } from "@dexlens/logger";
+import {
+  bot,
+  session,
+  FileAdapter,
+  initBotCommands,
+} from "@dexlens/telegram-sdk";
+import { logs } from "@dexlens/logger";
+import { MenuMiddleware, menu } from "@dexlens/menus";
+const menuMiddleware = new MenuMiddleware('/', menu);
+import { conversations, createConversation, greeting, channelAnnouncement, addLabel } from "@dexlens/conversations";
 
-const logs = new logger("stat-bot");
+logs.info("Starting stat bot");
+
+// @ts-ignore
+bot.use(session<{ userIsPremium: boolean }>({
+  initial: () => ({
+    userIsPremium: false,
+  }),
+  storage: new FileAdapter()
+}));
 
 bot.use(conversations());
 bot.use(createConversation(greeting));
-
-bot.command("start", async (ctx) => {
-  logs.info("Starting conversation");
-  await ctx.conversation.enter("greeting");
-});
+bot.use(createConversation(channelAnnouncement));
+bot.use(createConversation(addLabel));
+bot.use(menuMiddleware.middleware());
+initBotCommands(bot);
 
 bot.start();
