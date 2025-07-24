@@ -4,8 +4,12 @@
 
 # Packages Used
 - @dexlens/maths
-- @dexlens/telegram-sdk 
+- @dexlens/telegram-sdk
 - @dexlens/utils
 - @dexlens/conversations
 - @dexlens/logger
+- @dexlens/menus
+- @dexlens/supabase
+- @dexlens/cdnimages
+- @dexlens/constants
 
