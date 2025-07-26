@@ -6,7 +6,9 @@
       "testappstart": "deno run --allow-all apps/testapp/main.ts",
       "testappdev": "deno run --watch --allow-all apps/testapp/main.ts",
       "statbotstart": "deno run --allow-all apps/stat-bot/main.ts",
-      "statbotdev": "deno run --watch --allow-all apps/stat-bot/main.ts"
+      "statbotdev": "deno run --watch --allow-all apps/stat-bot/main.ts", 
+      "telegram-premium-bot": "deno run --allow-all apps/telegram-premium-bot/main.ts",
+      "telegram-premium-bot-dev": "deno run --watch --allow-all apps/telegram-premium-bot/main.ts"
     },
     "imports": {
       "@std/assert": "jsr:@std/assert@1",
@@ -18,7 +20,9 @@
       "@dexlens/menus": "../galactus/packages/menus/index.ts",
       "@dexlens/supabase": "../galactus/packages/supabase/index.ts",
       "@dexlens/cdnimages": "../galactus/packages/cdnimages/index.ts",
-      "@dexlens/constants": "../galactus/packages/constants/index.ts"
+      "@dexlens/constants": "../galactus/packages/constants/index.ts",
+      "@dexlens/premium-bot": "../galactus/packages/premium-bot/index.ts",
+      "@dexlens/secrets": "../galactus/packages/secrets/index.ts"
     }
   }
   
