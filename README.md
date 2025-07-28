@@ -1,6 +1,7 @@
 # Dexlens CORE
 
 - Edit 1
+- Edit 2
 
 ![alt text](galactus.png "Dexlens Core")
 
