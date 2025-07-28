@@ -1,5 +1,7 @@
 # Dexlens CORE
 
+- Edit 1
+
 ![alt text](galactus.png "Dexlens Core")
 
 # Packages Used
