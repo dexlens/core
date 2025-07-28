@@ -5,6 +5,7 @@
 - Edit 3
 - Edit 4
 - Edit 5
+- Edit 6
 
 ![alt text](galactus.png "Dexlens Core")
 
