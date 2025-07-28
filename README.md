@@ -10,6 +10,7 @@
 - Edit 8
 - Edit 9
 - Edit 10
+- Edit 11
 
 ![alt text](galactus.png "Dexlens Core")
 
