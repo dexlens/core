@@ -4,6 +4,7 @@
 
 # Apps 
 - Stat bot
+- Fetch prices
 
 # Packages Used
 - @dexlens/maths
