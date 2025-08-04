@@ -12,7 +12,8 @@ import {
     generatePDF, 
     getCurrentAnalysisData,
     getHistoryItems,
-    getSentiment
+    getSentiment,
+    initChartScanEventListeners
  } from "@dexlens/chartscan";
 
 (window as any).dexlens = {
@@ -26,6 +27,7 @@ import {
         generatePDF, // Puts the generatePDF function in the window.dexlens.chartscan.generatePDF
         getCurrentAnalysisData, // Puts the getCurrentAnalysisData function in the window.dexlens.chartscan.getCurrentAnalysisData
         getHistoryItems, // Puts the getHistoryItems function in the window.dexlens.chartscan.getHistoryItems
-        getSentiment // Puts the getSentiment function in the window.dexlens.chartscan.getSentiment
+        getSentiment, // Puts the getSentiment function in the window.dexlens.chartscan.getSentiment
+        initChartScanEventListeners // Puts the initChartScanEventListeners function in the window.dexlens.chartscan.initChartScanEventListeners
     }
 }
