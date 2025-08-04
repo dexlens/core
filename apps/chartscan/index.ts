@@ -1,9 +1,12 @@
-import { 
-    initTheme,
-    loadHistoryItems
-} from "@dexlens/chartscan";
+import * as esbuild from "npm:esbuild";
+import { denoPlugins } from "jsr:@luca/esbuild-deno-loader";
 
-export {
-    initTheme, // It's a function that initializes the theme of the chartscan app
-    loadHistoryItems // It's a function that loads the history items into the panel
-}
+const result = await esbuild.build({
+  plugins: [...denoPlugins()],
+  entryPoints: ["./apps/chartscan/mod.ts"],
+  outfile: "./apps/chartscan/dist/chartscan.esm.js",
+  bundle: true,
+  format: "esm",
+});
+
+esbuild.stop();
