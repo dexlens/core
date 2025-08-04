@@ -11,7 +11,8 @@ import {
     fileToBase64,
     generatePDF, 
     getCurrentAnalysisData,
-    getHistoryItems
+    getHistoryItems,
+    getSentiment
  } from "@dexlens/chartscan";
 
 (window as any).dexlens = {
@@ -24,6 +25,7 @@ import {
         fileToBase64, // Puts the fileToBase64 function in the window.dexlens.chartscan.fileToBase64
         generatePDF, // Puts the generatePDF function in the window.dexlens.chartscan.generatePDF
         getCurrentAnalysisData, // Puts the getCurrentAnalysisData function in the window.dexlens.chartscan.getCurrentAnalysisData
-        getHistoryItems // Puts the getHistoryItems function in the window.dexlens.chartscan.getHistoryItems
+        getHistoryItems, // Puts the getHistoryItems function in the window.dexlens.chartscan.getHistoryItems
+        getSentiment // Puts the getSentiment function in the window.dexlens.chartscan.getSentiment
     }
 }
