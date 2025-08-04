@@ -7,7 +7,7 @@ import {
     addStructuredData,
     analyzeImage, 
     clearAnalysisHistory,
-    displayResults
+    displayResults,
  } from "@dexlens/chartscan";
 
 (window as any).dexlens = {
@@ -16,6 +16,6 @@ import {
         addStructuredData, // Puts the addStructuredData function in the window.dexlens.chartscan.addStructuredData
         analyzeImage, // Puts the analyzeImage function in the window.dexlens.chartscan.analyzeImage
         clearAnalysisHistory, // Puts the clearAnalysisHistory function in the window.dexlens.chartscan.clearAnalysisHistory
-        displayResults // Puts the displayResults function in the window.dexlens.chartscan.displayResults
+        displayResults, // Puts the displayResults function in the window.dexlens.chartscan.displayResults
     }
 }
