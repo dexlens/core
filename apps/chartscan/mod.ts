@@ -1,4 +1,13 @@
-import { initChartScanEventListeners, initUI } from "@dexlens/chartscan";
+/**
+ * Chart Scan Bundler
+ * Copyright 2025 DexLens 
+ */
+import { 
+    GEMINI_API_KEY
+ } from "@dexlens/chartscan";
 
-initChartScanEventListeners();
-initUI();
+(window as any).dexlens = {
+    chartscan: {
+        GEMINI_API_KEY // Puts the API key in the window.dexlens.chartscan.GEMINI_API_KEY
+    }
+}
