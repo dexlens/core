@@ -9,7 +9,8 @@ import {
     clearAnalysisHistory,
     displayResults,
     fileToBase64,
-    generatePDF
+    generatePDF, 
+    getCurrentAnalysisData
  } from "@dexlens/chartscan";
 
 (window as any).dexlens = {
@@ -20,7 +21,7 @@ import {
         clearAnalysisHistory, // Puts the clearAnalysisHistory function in the window.dexlens.chartscan.clearAnalysisHistory
         displayResults, // Puts the displayResults function in the window.dexlens.chartscan.displayResults
         fileToBase64, // Puts the fileToBase64 function in the window.dexlens.chartscan.fileToBase64
-        generatePDF // Puts the generatePDF function in the window.dexlens.chartscan.generatePDF
-
+        generatePDF, // Puts the generatePDF function in the window.dexlens.chartscan.generatePDF
+        getCurrentAnalysisData // Puts the getCurrentAnalysisData function in the window.dexlens.chartscan.getCurrentAnalysisData
     }
 }
