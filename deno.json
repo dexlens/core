@@ -6,7 +6,9 @@
       "testappstart": "deno run --allow-all apps/testapp/main.ts",
       "testappdev": "deno run --watch --allow-all apps/testapp/main.ts",
       "statbotstart": "deno run --allow-all apps/stat-bot/main.ts",
-      "statbotdev": "deno run --watch --allow-all apps/stat-bot/main.ts"
+      "statbotdev": "deno run --watch --allow-all apps/stat-bot/main.ts",
+      "fetchprices": "deno run --allow-all apps/fetch-prices/index.ts",
+      "fetchpricesdev": "deno run --watch --allow-all apps/fetch-prices/index.ts"
     },
     "imports": {
       "@std/assert": "jsr:@std/assert@1",
