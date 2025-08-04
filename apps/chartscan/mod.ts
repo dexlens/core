@@ -8,6 +8,7 @@ import {
     analyzeImage, 
     clearAnalysisHistory,
     displayResults,
+    fileToBase64,
  } from "@dexlens/chartscan";
 
 (window as any).dexlens = {
@@ -17,5 +18,6 @@ import {
         analyzeImage, // Puts the analyzeImage function in the window.dexlens.chartscan.analyzeImage
         clearAnalysisHistory, // Puts the clearAnalysisHistory function in the window.dexlens.chartscan.clearAnalysisHistory
         displayResults, // Puts the displayResults function in the window.dexlens.chartscan.displayResults
+        fileToBase64, // Puts the fileToBase64 function in the window.dexlens.chartscan.fileToBase64
     }
 }
